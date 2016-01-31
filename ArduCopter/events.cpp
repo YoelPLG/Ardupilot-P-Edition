@@ -18,7 +18,7 @@ void Copter::failsafe_radio_on_event()
     } else {
         if (control_mode == AUTO && g.failsafe_throttle == FS_THR_ENABLED_CONTINUE_MISSION) {
             // continue mission
-        } else if (control_mode == LAND && g.failsafe_battery_enabled == FS_BATT_LAND && failsafe.battery) {
+        } else if (control_mode == LAND) {
             // continue landing
         } else {
             if (g.failsafe_throttle == FS_THR_ENABLED_ALWAYS_LAND) {
